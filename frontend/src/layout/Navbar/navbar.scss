@@ -1,0 +1,30 @@
+header{
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgba(0, 0, 0, 0.867);
+
+    nav{
+       color: white ;
+        padding: 20px 0px;
+        width: 65%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            cursor: pointer;
+            span{
+                color: #b7472a ;
+                
+            }
+        }
+        ul{
+            display: flex;
+            gap: 35px;
+            li{
+                color: white ;
+               
+            }
+        }
+    }
+}
