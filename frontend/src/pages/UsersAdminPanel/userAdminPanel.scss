@@ -1,0 +1,20 @@
+#user-admin-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    table{
+        tr{
+            th{
+                background-color: #b7472a;
+                color: white;
+                padding: 5px;
+            }
+            td{
+                background-color: rgb(211, 211, 211);
+                padding: 5px;
+                text-align: center;
+            }
+        }
+    }
+}

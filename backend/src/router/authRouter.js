@@ -6,4 +6,4 @@ import { loginController, registerController } from "../controller/authControlle
 export const authRouter = Router()
 
 authRouter.post('/login',loginController)
-.post('/register',registerController)
+.post('/register',registerController) 

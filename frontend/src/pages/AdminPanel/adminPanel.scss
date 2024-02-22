@@ -1,0 +1,73 @@
+#admin-panel{
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(209, 209, 209);
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    
+        .user{
+            width: 250px;
+            height: 250px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png');
+            background-size: cover;
+            transition: 0.3s;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 10px;
+            position: relative;
+            &:hover{
+             
+                scale: 1.02;
+                .line{
+                    width: 100%;
+                }
+              
+               
+            }
+            .line{
+                height: 3px;
+                width: 0;
+                background-color: #b7472a;
+                position: absolute;
+                bottom: 0;
+                transition: 0.3s ease-in;
+            }
+         
+            
+          
+          
+        }
+        .product{
+            width: 250px;
+            height: 250px;
+            background-image: url('https://kasapreko.com/storage/2021/11/image_2021-11-10_120436.png');
+            background-size: cover;
+            transition: 0.3s;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 10px;
+            &:hover{
+                scale: 1.02;
+                .line{
+                    width: 100%;
+                }
+             
+            }
+            .line{
+                height: 3px;
+                width: 0;
+                background-color: #b7472a;
+                position: absolute;
+                bottom: 0;
+                transition: 0.3s ease-in;
+            }
+         
+        }
+
+    }
+}

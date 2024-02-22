@@ -1,9 +1,15 @@
 #hero {
     background-image: url("https://preview.colorlib.com/theme/liquorstore/images/bg_2.jpg");
     min-height: 100vh;
+    background-attachment:fixed;
+    
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
     .shadow{
         width: 100%;
         position: absolute;

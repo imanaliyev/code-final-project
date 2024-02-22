@@ -1,0 +1,160 @@
+#offers{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container{
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            p{
+                color:#b7472a ;
+                font-style: italic;
+            }
+            h2{
+                font-size: 40px;
+            }
+
+        }
+        .cards{
+            margin: 100px 0px;
+            width: 100%;
+            display: grid;
+            justify-content: space-between;
+            place-items: center;
+            grid-template-columns: auto auto auto auto;
+            row-gap: 20px;
+            .card{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px;
+             
+                height: 482px;
+                
+        
+                .image{
+                   height: 350px;
+
+                    position: relative;
+                    &:hover{
+                        .shadow{
+                            height: 100%;
+                        }
+                    }
+                    .shadow{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0 ;
+                        width: 100%;
+                        height: 0;
+                        overflow: hidden;
+                        background-color: rgba(0, 0, 0, 0.552);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                       transition: ease-out 300ms;
+                        .buttons{
+                            display: flex;
+                            gap: 10px;
+                            button:nth-of-type(1){
+                                transition: 300ms;
+                                &:hover{
+                                    
+                                    color: #b7472a;
+                                }
+
+                            }
+                            button:nth-of-type(2){
+                                transition: 300ms;
+                                &:hover{
+                                    
+                                    color: #b7472a;
+                                }
+
+                            }
+                            button:nth-of-type(3){
+                                transition: 300ms;
+                                &:hover{
+                                    
+                                    color: #b7472a;
+                                }
+
+                            }
+                            button{
+                                width: 65px;
+                                height: 65px;
+                                border: 1px solid white;
+                                background-color: transparent;
+                                color: white;
+                                font-size: 18px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    img{
+                        width: 255px ;
+                        height: 350px;
+                    }
+                }
+                p:nth-of-type(1){
+                    color: #b7472a;
+    
+                }
+                p:nth-of-type(2){
+                    font-size: 20px;
+                    text-align: center;
+                    width: 250px;
+                    font-weight: 200;
+               
+    
+                }
+                p:nth-of-type(3){
+                    font-weight: 550;
+                    font-style: italic;
+                    color: grey;
+                
+           
+           
+                    
+               
+    
+                }
+            }
+
+      
+            
+
+
+        }
+        .wiev-all{
+            width: 350px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #b7472a;
+            color: white;
+            font-size: 18px;
+            gap: 5px;
+            cursor: pointer;
+            i{
+                margin-top: 2px;
+            }
+            
+        }
+        
+       
+
+    }
+}

@@ -28,10 +28,12 @@ export const getByIdUser = async (req, res) => {
 }
 
 
-export const postUser = async (req, res) => {
+export const postUser =  async(req, res,) => {
+    
     try {
-        const { username, password, email } = req.body
-        const newUser = new userModel({ username, password, email })
+        
+        const { username, password, email,avatar } = req.body
+        const newUser = new userModel({ username, password, email,avatar })
         await newUser.save()
         res.status(200).json('item added')
     } catch (error) {

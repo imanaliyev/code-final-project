@@ -1,0 +1,194 @@
+#basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .hero {
+        background-image: url('https://preview.colorlib.com/theme/liquorstore/images/bg_2.jpg');
+        height: 50vh;
+        background-attachment: fixed;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .shadow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.253);
+        }
+
+        .header {
+            text-align: center;
+            position: absolute;
+            z-index: 3;
+
+            p {
+                color: grey;
+                font-size: 15px;
+
+                a {
+                    color: grey;
+                    font-size: 15px;
+                }
+
+                i {
+                    margin: 0px 5px;
+                }
+
+            }
+
+            h1 {
+                color: white;
+                font-size: 45px;
+            }
+
+        }
+    }
+
+    .container {
+        width: 65%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h1{
+            margin: 100px 0px;
+        }
+       
+
+
+     .table-wrap{
+        overflow-x: scroll;
+        width: 100%;
+        table {
+            margin: 100px 0px;
+            width: 100%;
+        
+           
+
+            thead {
+                tr {
+                    display: table-row;
+                    vertical-align: inherit;
+                    border-color: inherit;
+                    background-color: #b7472a;
+
+                    th {
+                        border: none;
+                        padding: 30px;
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: white;
+
+                    }
+                }
+
+
+
+
+            }
+
+            tbody {
+                display: table-row-group;
+                vertical-align: middle;
+                border-color: inherit;
+
+                tr {
+                    margin-bottom: 10px;
+
+                    td {
+                        border: none;
+                        padding: 30px;
+                        background: #fff;
+                        border-bottom: 4px solid #f8f9fd;
+                        vertical-align: middle;
+
+                        i {
+                            cursor: pointer;
+                            transition: 300ms;
+
+                            &:hover {
+                                color: red;
+                            }
+                        }
+
+                        button {
+                            border-radius: 100%;
+                            width: 20px;
+                            height: 20px;
+                            border: none;
+                            font-size: 18px;
+
+                        }
+
+                        img {
+                            width: 70px;
+                            
+
+                        }
+                    }
+                }
+            }
+        }
+     }
+
+        .total-bill {
+         align-items: center;
+         justify-content: end;
+         display: flex;
+            width: 100%;
+            .total-bill-container{
+            display: flex;
+            flex-direction: column;
+           width: 300px;
+            gap: 10px;}
+
+
+            h2 {
+                font-weight: 300;
+                margin: 20px 0px;
+            }
+
+            ul {
+                width: 300px;
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+                li:nth-of-type(4){
+                margin-top: 20px;
+                
+                }
+
+                li {
+                    width: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: grey;
+
+
+                }
+
+                .total {
+                    color: black;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+            button{
+            border: none;
+            background-color: #b7472a;
+            color: white;
+            padding: 8px;
+            margin: 30px 0px;
+            }
+        }
+    }
+}

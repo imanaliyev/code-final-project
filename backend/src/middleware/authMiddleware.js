@@ -7,7 +7,7 @@ export const verifyAccess = function (roles) {
 
         try {
             let token = req.headers.authorization
-            console.log(token);
+           
             if (!token) {
               return  res.status(403).send("no access!")
              
@@ -24,7 +24,7 @@ export const verifyAccess = function (roles) {
                 return res.send("you dont have access")
                 
             }
-            console.log(decoded)
+           
           
             next()
             

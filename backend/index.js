@@ -5,11 +5,23 @@ import cors from 'cors'
 import { productRouter } from './src/router/productRouter.js'
 import { userRouter } from './src/router/userRouter.js'
 import { authRouter } from './src/router/authRouter.js'
-import { verifyAccess } from './src/middleware/authMiddleware.js'
+
+import multer from "multer"
+
+
+
+
+
+
+
 const app = express()
 const port = process.env.PORT
+
+
+
 app.use(express.json())
-app.use(cors())
+app.use(cors()) 
+
   
 app.use("/products/",productRouter)  
 app.use("/user/",userRouter)  
