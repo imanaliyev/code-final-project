@@ -22,7 +22,7 @@ function BasketProvider({children}) {
           method:"PUT",
           headers: {
            
-            Authorization: `Bearer ${token}`},
+            "Authorization": `Bearer ${token}`},
           body:{
             id:decoded.id,
             productId:item._id

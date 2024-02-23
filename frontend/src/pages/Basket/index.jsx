@@ -12,7 +12,7 @@ function Basket() {
       method: "PUT",
       headers: {
        
-        Authorization: `Bearer ${token}`
+        "Authorization": `Bearer ${token}`
       },
       body: {
         id: decoded.id

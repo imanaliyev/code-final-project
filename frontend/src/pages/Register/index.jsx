@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { UserContext } from "../../context/userContext/UserProvider";
+import { UserContext } from "../../context/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import "./register.scss";
 import { Formik, Field, Form, ErrorMessage } from "formik";
@@ -10,7 +10,7 @@ function Register() {
   const navigate = useNavigate();
 
   async function addUser(item) {
-    await fetch("http://localhost:3400/register", {
+    await fetch("http://localhost:8080/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(item),
@@ -26,15 +26,15 @@ function Register() {
     <div>
       <div id="register">
         <div className="container">
-          <h1>Qeydiyyat</h1>
+          <h1>Sign Up</h1>
           <Formik
-            initialValues={{ name: "", email: "", password: "" }}
+            initialValues={{ username: "", email: "", password: "" }}
             validationSchema={Yup.object({
-              name: Yup.string().required("Məlumatı daxil edin"),
-              password: Yup.string().required("Məlumatı daxil edin"),
+              username: Yup.string().required("required"),
+              password: Yup.string().required("required"),
               email: Yup.string()
-                .email("Məlumatı düzgün daxil edin")
-                .required("Məlumatı daxil edin"),
+                .email("required")
+                .required("required"),
             })}
             onSubmit={(values, { setSubmitting, resetForm }) => {
               setTimeout(() => {
@@ -45,22 +45,19 @@ function Register() {
             }}
           >
             <Form>
-              <h5>Məlumatlarınızı daxil edin</h5>
-              <Field placeholder="Adınızı daxil edin" name="name" type="text" />
+             
+              <Field placeholder="username" name="username" type="text" />
               <h4>
-                <ErrorMessage name="name" />
+                <ErrorMessage name="username" />
               </h4>
 
-              <Field name="email" placeholder="Mailinizi daxil edin" type="email" />
+              <Field name="email" placeholder="e-mail" type="email" />
               <h4>
-                <ErrorMessage name="email" />
+                <ErrorMessage name="e-mail" />
               </h4>
 
               <Field
-                placeholder="Parolunuzu daxil edin"
-                className="password"
-                name="password"
-                type="password"
+                placeholder="password" className="password"name="password" type="password"
               />
               <h4>
                 <ErrorMessage name="password" />
@@ -68,11 +65,11 @@ function Register() {
 
               <div className="go_register">
                 <Link to="/login">
-                  <h4>Daha öncə qeydiyyatdan keçmisiniz?</h4>
+                  <h4>do you have an account?</h4>
                 </Link>
               </div>
 
-              <button type="submit">Qeydiyyat</button>
+              <button type="submit">register</button>
             </Form>
           </Formik>
         </div>
